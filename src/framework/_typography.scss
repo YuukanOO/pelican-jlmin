@@ -1,0 +1,15 @@
+/*
+|--------------------------------------------------------------------------
+| _typography.scss
+|--------------------------------------------------------------------------
+|
+| Defines common typography mixins.
+|
+*/
+
+/**
+ * Given the px size and base size (in px), returns the em size.
+ */
+@function em($px, $base: $baseline) {
+    @return ($px / $base) * 1em;
+}

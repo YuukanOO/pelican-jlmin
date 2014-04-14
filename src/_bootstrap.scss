@@ -1,0 +1,32 @@
+/*
+|--------------------------------------------------------------------------
+| _bootstrap.scss
+|--------------------------------------------------------------------------
+|
+| Bootstrap the framework including needed compass extension, susy and the
+| framework.
+|
+*/
+
+// Import compass related files
+@import "compass";
+@import "compass/reset";
+
+// Import specific config
+@import "config";
+
+// Import third party libraries
+@import "vendor/_pygments_tomorrow_night";
+@import "vendor/susy";
+
+// Import the whole framework
+@import "framework/all";
+
+// Let's configure susy
+@import "susy_config";
+
+// Import modules
+@import "modules/typography";
+@import "modules/code";
+@import "modules/media";
+@import "modules/utility";

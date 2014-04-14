@@ -1,0 +1,107 @@
+/*
+|--------------------------------------------------------------------------
+| _config.scss
+|--------------------------------------------------------------------------
+|
+| This file contains global configuration variables used within the
+| application. It lets you customize it the way you want.
+|
+*/
+
+$baseline: 18px !default;
+
+// Since I need the em method, import it right now
+@import "framework/typography";
+
+/**
+ * GRID
+ * ------------------------------------------------------------------------
+ */
+
+$container_width: em(650px);
+
+/**
+ * COLORS
+ * ------------------------------------------------------------------------
+ */
+
+$body_color: #222;
+
+// Primary colors uses for emphasis
+$color1: #DB431A;
+$color1_inverse: #fff;
+$color2: #2455C3;
+// Subtle colors to reinforce certain aspects of the application
+$color3: darken($color1, 5%); //#BA3925;
+$color4: yellow;
+// Very light colors such as gray for border and light backgrounds
+$color5: #999;
+$color6: #ddd;
+
+/**
+ * BODY
+ * ------------------------------------------------------------------------
+ */
+
+$body_font: "PT Serif", Georgia, serif;
+
+/**
+ * LINKS
+ * ------------------------------------------------------------------------
+ */
+
+$link_normal_color: $color2;
+$link_normal_decoration: none;
+
+$link_focus_color: darken($color2, 15%);
+$link_focus_decoration: underline;
+
+/**
+ * LISTS
+ * ------------------------------------------------------------------------
+ */
+
+$list_type: disc;
+$list_position: inside;
+
+/**
+ * BLOCKQUOTES
+ * ------------------------------------------------------------------------
+ */
+
+$blockquote_size: 1.5em;
+$blockquote_margins: 1.5em;
+
+/**
+ * CODES AND PRE
+ * ------------------------------------------------------------------------
+ */
+
+$code_font: monospace,serif;
+$code_size: 0.9em;
+
+/**
+ * HEADINGS
+ * ------------------------------------------------------------------------
+ */
+
+$heading_font: "Source Sans Pro", Georgia, serif;
+$heading_weight: bold;
+
+$heading1_size: 2em;
+$heading1_color: $color1;
+
+$heading2_size: 1.5em;
+$heading2_color: $color1;
+
+$heading3_size: 1.125em;
+$heading3_color: $body_color;
+
+$heading4_size: 1em;
+$heading4_color: $color1;
+
+$heading5_size: 0.8125em;
+$heading5_color: $color1;
+
+$heading6_size: 0.625em;
+$heading6_color: $color1;

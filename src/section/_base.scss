@@ -1,0 +1,76 @@
+/*
+|--------------------------------------------------------------------------
+| _base.scss
+|--------------------------------------------------------------------------
+|
+| Base section, common design elements.
+|
+*/
+
+%container {
+    @include container;
+}
+
+#site-nav-container {
+    border-bottom: 1px solid $color6;
+    @include b_margin(4, $bottom: true);
+    @include b_margin($top: true);
+}
+
+#site-nav {
+    @extend %container;
+
+    ul {
+        margin-top: 0;
+    }
+
+    li {
+        @extend %heading;
+        display: inline-block;
+        width: 25%;
+        text-align: center;
+    }
+
+    .active {
+        a,
+        a:link,
+        a:visited {
+            color: $body_color;
+        }
+    }
+
+    a,
+    a:visited,
+    a:link {
+        color: $color5;
+        text-decoration: none;
+    }
+
+    .active a:hover,
+    .active a:focus,
+    a:hover,
+    a:focus {
+        color: $color1;
+        text-decoration: none;
+    }
+}
+
+#site-content {
+    @extend %container;
+}
+
+#site-footer {
+    @extend %container;
+    @include b_margin(2, $top: true);
+    
+    p {
+        @extend %small;
+        color: $color5;
+        text-align: center;
+    }
+
+    // Special hard coded style for the little heart
+    .fa-heart {
+        color: #E74C3C;
+    }
+}

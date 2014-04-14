@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} - {{ SITENAME }} {% endblock title %}
+
+{% block header %}
+<header id="page-header">
+    <h1 id="page-title">{{ page.title }}</h1>
+    <h3 id="page-description">{{ page.summary|replace('<p>', '')|replace('</p>', '') }}</h3>
+</header>
+{% endblock %}
+
+{% block content %}
+<main id="site-content">
+    <div class="content">
+        {{ page.content }}
+
+        <h2>Mes projets personnels</h2>
+        <ul class="self-projects">
+            {% for repo in github_user_repos %}
+            <li>
+                <a href="{{ repo.html_url }}" title="Acc&eacute;der &agrave; la page Github du projet">{{ repo.name }}</a> <span class="subtitle"> &mdash; {{ repo.language }}</span>
+                <p>{{ repo.description }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h2>Projets auxquels j'ai contribu&eacute;</h2>
+        <ul class="contributed-projects">
+            <li>
+                <a href="https://github.com/FriendCode/codebox/" title="Acc&eacute;der &agrave; la page Github du projet">FriendCode/codebox</a> <span class="subtitle"> &mdash; JavaScript</span>
+                <p>Open source cloud &amp; desktop IDE</p>
+            </li>
+            <li>
+                <a href="https://code.launchpad.net/~proxiad-openerp/proxiad-openobjects-addons/7.0" title="Acc&eacute;der au launchpad">OpenERP Modules</a> <span class="subtitle"> &mdash; Python</span>
+                <p>Development of generic modules for OpenERP</p>
+            </li>
+        </ul>
+    </div>
+</main>
+{% endblock %}

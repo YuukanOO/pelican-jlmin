@@ -1,0 +1,76 @@
+/*
+|--------------------------------------------------------------------------
+| _content.scss
+|--------------------------------------------------------------------------
+|
+| Content presentation related styles.
+|
+*/
+
+%right {
+    @include span(6);
+    text-align: right;
+}
+
+%left {
+    @include span(6);
+    text-align: left;
+}
+
+.list-header {
+
+    @include container;
+
+    h1 {
+        @extend %left;
+        margin-top: 0;
+    }
+
+    .right {
+        @extend %right;
+        @include b_margin(0.5, $top: true);
+    }
+
+}
+
+.list-footer {
+
+    @include container;
+
+    .right {
+        @extend %right;
+    }
+
+    .left {
+        @extend %left;
+    }
+
+}
+
+.self-projects,
+.contributed-projects,
+.archives-list {
+    list-style-type: none;
+    list-style-position: outside;
+    margin: 0;
+
+    a {
+        font-weight: bold;
+    }
+}
+
+.archives-list {
+    h2 {
+        @extend %body;
+        display: inline;
+    }
+
+    .content,
+    .content * {
+        display: inline;
+    }
+
+    li {
+        @include b_margin($bottom: true);
+    }
+}

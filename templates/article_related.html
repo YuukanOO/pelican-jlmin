@@ -1,0 +1,10 @@
+{% if article.related_posts %}
+<aside id="page-related">
+    <h1>Vous appr&eacute;cierez aussi ...</h1>
+    <ul>
+        {% for related_post in article.related_posts %}
+        <li><a href="{{ SITEURL }}/{{ related_post.url}}">{{ related_post.title }}</a> &mdash; {{ related_post.summary|striptags }}</li>
+        {% endfor %}
+    </ul>
+</aside>
+{% endif %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Archives - {{ SITENAME }} {% endblock title %}
+
+{% block header %}
+<header id="page-header">
+    <h1 id="page-title">Archives</h1>
+    <h3 id="page-description">Tous les articles publi&eacute;s sur ce site</h3>
+</header>
+{% endblock %}
+
+{% block content %}
+<main id="site-content">
+    {% for year, date_year in dates|groupby('date.year')|sort(reverse=True) %}
+    <h2>{{ year }}</h2>
+        {% for month, articles in date_year|groupby('date.month')|sort(reverse=True) %}
+        <h3>{{ articles[0].date.strftime('%B') }}</h3>
+        <ul class="archives-list">
+            {% for article in articles %}
+            <li>
+                <article>
+                    <h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+                    <div class="content">&mdash; {{ article.summary }}</div>
+                </article>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    {% endfor %}
+</main>
+{% endblock %}

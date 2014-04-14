@@ -1,0 +1,195 @@
+/*
+|--------------------------------------------------------------------------
+| _typography.scss
+|--------------------------------------------------------------------------
+|
+| Defines base typography styles.
+|
+*/
+
+%heading {
+    font-family: $heading_font;
+    font-weight: $heading_weight;
+}
+
+%heading1 {
+    @extend %heading;
+    color: $heading1_color;
+    font-size: $heading1_size;
+}
+
+%heading2 {
+    @extend %heading;
+    color: $heading2_color;
+    font-size: $heading2_size;
+}
+
+%heading3 {
+    @extend %heading;
+    color: $heading3_color;
+    font-size: $heading3_size;
+}
+
+%heading4 {
+    @extend %heading;
+    color: $heading4_color;
+    font-size: $heading4_size;
+}
+
+%heading5 {
+    @extend %heading;
+    color: $heading5_color;
+    font-size: $heading5_size;
+}
+
+%heading6 {
+    @extend %heading;
+    color: $heading6_color;
+    font-size: $heading6_size;
+}
+
+%body {
+    color: $body_color;
+    font-family: $body_font;
+    font-size: em($baseline);
+    font-weight: normal;
+    line-height: 1.5em;
+}
+
+%small {
+    font-size: 0.85em;
+}
+
+/**
+ * MISC.
+ * ------------------------------------------------------------------------
+ */
+
+::-moz-selection {
+    background-color: $color1;
+    color: $color1_inverse;
+}
+
+::selection {
+    background-color: $color1;
+    color: $color1_inverse;
+}
+
+/**
+ * BODY
+ * ------------------------------------------------------------------------
+ */
+
+html {
+    font-size: $baseline;
+}
+
+body {
+    @extend %body;
+}
+
+// Common elements, add a margin bottom for vertical rhythm
+p,
+ul,
+blockquote {
+    @extend %body;
+    @include b_margin($bottom: true);
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+small {
+    @extend %small;
+}
+
+/**
+ * Quotes
+ * ------------------------------------------------------------------------
+ */
+
+blockquote {
+    font-size: $blockquote_size;
+    font-style: italic;
+    margin: $blockquote_margins;
+}
+
+/**
+ * Lists
+ * ------------------------------------------------------------------------
+ */
+
+// List inside another list, dismiss bottom margin but add a left margin
+ul ul {
+    margin-bottom: 0;
+}
+
+ul {
+    list-style-type: $list_type;
+    list-style-position: $list_position;
+    @include b_margin(1.5, $left: true);
+}
+
+/**
+ * HEADINGS
+ * ------------------------------------------------------------------------
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend %heading;
+    line-height: 1.25em;
+    @include b_margin(0, $left: true, $right: true);
+    @include b_margin($top: true, $bottom: true);
+}
+
+h1 {
+    @extend %heading1;
+}
+
+h2 {
+    @extend %heading2;
+}
+
+h3 {
+    @extend %heading3;
+}
+
+h4 {
+    @extend %heading4;
+}
+
+h5 {
+    @extend %heading5;
+}
+
+h6 {
+    @extend %heading6;
+}
+
+/**
+ * LINKS
+ * ------------------------------------------------------------------------
+ */
+
+a,
+a:link,
+a:visited {
+    color: $link_normal_color;
+    text-decoration: $link_normal_decoration;
+}
+
+a:hover,
+a:focus {
+    color: $link_focus_color;
+    text-decoration: $link_focus_decoration;
+}

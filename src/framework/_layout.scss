@@ -1,0 +1,54 @@
+/*
+|--------------------------------------------------------------------------
+| _layout.scss
+|--------------------------------------------------------------------------
+|
+| Layout related helpers.
+|
+*/
+
+/**
+ * Sets margins based on baseline * given ratio.
+ *
+ * If no [top], [bottom], [left] or [right] boolean is given, it applies the margin
+ * to all directions.
+ */
+@mixin b_margin($ratio: 1, $top: false, $bottom: false, $left: false, $right: false) {
+
+    $res: em($baseline * $ratio);
+
+    // If all are set to false, consider it to be global margin
+    @if ($top or $bottom or $left or $right) == false {
+        margin: $res;
+    } 
+    @else {
+        @if $top { margin-top: $res; }
+        @if $bottom { margin-bottom: $res; }
+        @if $left { margin-left: $res; }
+        @if $right { margin-right: $res; }
+    }
+
+}
+
+/**
+ * Sets paddings based on baseline * given ratio.
+ *
+ * If no [top], [bottom], [left] or [right] boolean is given, it applies the padding
+ * to all directions.
+ */
+@mixin b_padding($ratio: 1, $top: false, $bottom: false, $left: false, $right: false) {
+
+    $res: em($baseline * $ratio);
+
+    // If all are set to false, consider it to be global padding
+    @if ($top or $bottom or $left or $right) == false {
+        padding: $res;
+    } 
+    @else {
+        @if $top { padding-top: $res; }
+        @if $bottom { padding-bottom: $res; }
+        @if $left { padding-left: $res; }
+        @if $right { padding-right: $res; }
+    }
+
+}

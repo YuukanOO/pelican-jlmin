@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block header %}
+<div id="site-content">
+	<header id="page-header">
+		<h1 id="page-title">Hey,</h1>
+		<h3 id="page-description">Je m'appelle <strong>Julien Leicher</strong>, je suis d&eacute;veloppeur et passionn&eacute; par ce que je fais !</h3>
+	</header>
+{% endblock %}
+
+{% block content %}
+	<main id="home">
+		<div class="list-header">
+			<h1>R&eacute;c&eacute;mment publi&eacute;s</h1>
+			<p class="small right">
+				<a href="{{ SITEURL }}/categories/" title="Acc&eacute;der aux cat&eacute;gories">Cat&eacute;gories</a> &amp; <a href="{{ SITEURL }}/archives/" title="Acc&eacute;der aux archives">Archives</a>
+			</p>
+		</div>
+
+		<ul class="archives-list">
+			{% for article in articles_page.object_list %}
+			<li>
+				<article>
+					<h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+					<div class="content">&mdash; {{ article.summary }}</div>
+				</article>
+			</li>
+			{% endfor %}
+		</ul>
+
+	</main>
+</div>
+{% endblock %}

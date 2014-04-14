@@ -1,0 +1,17 @@
+/*
+|--------------------------------------------------------------------------
+| _susy_config.scss
+|--------------------------------------------------------------------------
+|
+| Configures the Susy awesome framework <3
+|
+*/
+
+$susy: (
+    columns: 12,
+    container: $container_width,
+    gutters: 0,
+    math: fluid,
+    output: float,
+    gutter-position: inside,
+);

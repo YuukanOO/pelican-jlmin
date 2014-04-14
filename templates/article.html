@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+
+{% for keyword in article.keywords %}
+<meta name="keywords" contents="{{keyword}}" />
+{% endfor %}
+
+{% for description in article.description %}
+<meta name="description" contents="{{description}}" />
+{% endfor %}
+
+{% for tag in article.tags %}
+<meta name="tags" contents="{{tag}}" />
+{% endfor %}
+{% endblock %}
+
+{% block title %}{{ article.title }} - {{ SITENAME }} {% endblock title %}
+
+{% block header %}
+<article id="site-content">
+	<header id="page-header">
+		<h1 id="page-title">{{ article.title }}</h1>
+        <h3 id="page-description">{{ article.summary|replace('<p>', '')|replace('</p>', '') }}</h3>
+		<h4 class="page-meta">Publi&eacute; le<abbr title="{{ article.date.isoformat() }}"> {{ article.locale_date }} </abbr> dans <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></h4>
+	</header>
+{% endblock %}
+
+{% block content %}
+	<div class="content">{{ article.content }}</div>
+</article>
+
+{% include "article_related.html" %}
+
+<div id="follow-me">
+    <p>Un commentaire, une remarque ? Retrouvez moi sur <a href="https://google.com/+julienleicher" title="Mon profil google+">Google+</a> et <a href="https://twitter.com/julien_leicher" title="Mon profil twitter">Twitter</a> !</p>
+</div>
+{% endblock %}

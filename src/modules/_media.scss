@@ -1,0 +1,23 @@
+/*
+|--------------------------------------------------------------------------
+| _media.scss
+|--------------------------------------------------------------------------
+|
+| Defines rules for media styles (images, videos, audio and so on).
+|
+*/
+
+img {
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width:100% !important;
+
+    @include b_margin(2, $top: true, $bottom: true);
+}
+
+.small img,
+img.small {
+    max-width: 40% !important;
+}

@@ -1,0 +1,85 @@
+/*
+|--------------------------------------------------------------------------
+| _article_and_page.scss
+|--------------------------------------------------------------------------
+|
+| Article / Page related styles.
+|
+*/
+
+#home {
+    h1 {
+        @extend %heading2;
+    }
+}
+
+#page-header {
+    @include b_margin(4, $bottom: true);
+}
+
+#page-title {
+    font-size: 2.65em;
+    margin-top: 0;
+    text-align: center;
+    @include b_margin(0.25, $bottom: true);
+}
+
+#page-description {
+    @extend %body;
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    @include b_margin(0.25, $top: true);
+}
+
+.page-meta {
+    @extend %body;
+    color: $color5;
+    font-style: italic;
+    text-align: center;
+
+    a {
+        font-style: normal;
+    }
+}
+
+#follow-me {
+    @extend %container;
+
+    $border: 1px solid $color6;
+
+    border-top: $border;
+    border-bottom: $border;
+    font-style: italic;
+    text-align: center;
+
+    @include b_margin(2, $top: true);
+    @include b_padding($top: true);
+}
+
+#page-related {
+    @extend %container;
+    @include b_margin(2, $top: true, $bottom: true);
+
+    h1 {
+        @extend %heading3;
+    }
+
+    ul {
+        font-size: 0.9em;
+        list-style-type: none;
+        list-style-position: outside;
+        margin: 0;
+    }
+
+    li {
+        @include b_margin($bottom: true);
+    }
+
+    a,
+    a:link,
+    a:visited {
+        color: $color1;
+        font-weight: bold;
+    }
+}

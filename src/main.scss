@@ -1,0 +1,17 @@
+/*
+|--------------------------------------------------------------------------
+| main.scss
+|--------------------------------------------------------------------------
+|
+| Main sass files for the application, bootstrap the framework and needed
+| modules and load specific sections.
+|
+*/
+
+// Import the framework and modules
+@import "bootstrap";
+
+// And specific styles
+@import "section/base";
+@import "section/article_and_page";
+@import "section/content";

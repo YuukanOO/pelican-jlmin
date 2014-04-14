@@ -1,0 +1,17 @@
+{% if DEFAULT_PAGINATION and articles_paginator.num_pages > 1 %}
+<div class="list-footer">
+
+	<p class="left">
+	{% if articles_page.has_next() %}
+        <a href="{{ SITEURL }}/{{ articles_next_page.url }}" title="Plus anciens">&laquo;<span> Plus anciens</span></a>
+    {% endif %}
+    </p>
+
+    <p class="right">
+    {% if articles_page.has_previous() %}
+        <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" title="Plus r&eacute;cents"><span>Plus r&eacute;cents </span>&raquo;</a>
+    {% endif %}
+    </p>
+
+</div>
+{% endif %}
