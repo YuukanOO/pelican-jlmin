@@ -8,6 +8,6 @@ Thème [Pelican](https://github.com/getpelican/pelican) utilisé sur [mon site p
 Directory Structure
 ---
 
-- src/ : SASS source files
-- static/ : Generated CSS file(s)
-- templates/ : jinja2 template files
+- `src/` : SASS source files
+- `static/` : Generated CSS file(s)
+- `templates/` : jinja2 template files
