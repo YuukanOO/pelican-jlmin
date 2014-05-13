@@ -1,0 +1,24 @@
+/*
+|--------------------------------------------------------------------------
+| _responsive.scss
+|--------------------------------------------------------------------------
+|
+| Defines classes for responsiveness.
+|
+*/
+
+.hide-on-small {
+    display: none !important;
+
+    @include breakpoint($when-large) {
+        display: inherit !important;
+    }
+}
+
+.hide-on-large {
+	display: inherit !important;
+
+	@include breakpoint($when-large) {
+        display: none !important;
+    }
+}

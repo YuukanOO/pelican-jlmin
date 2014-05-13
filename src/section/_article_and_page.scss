@@ -14,6 +14,7 @@
 }
 
 #page-header {
+    @extend %container;
     @include b_margin(4, $bottom: true);
 }
 
@@ -80,6 +81,17 @@
     a:link,
     a:visited {
         color: $color1;
+        display: block;
         font-weight: bold;
+
+        @include breakpoint($when-large) {
+            display: inline;
+        }
+    }
+
+    .hide-on-small {
+        @include breakpoint($when-large) {
+            display: inline !important;
+        }
     }
 }

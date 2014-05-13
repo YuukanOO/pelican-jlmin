@@ -18,7 +18,7 @@
         <ul class="self-projects">
             {% for repo in github_user_repos %}
             <li>
-                <a href="{{ repo.html_url }}" title="Acc&eacute;der &agrave; la page Github du projet">{{ repo.name }}</a> <span class="subtitle"> &mdash; {{ repo.language }}</span>
+                <a href="{{ repo.html_url }}" title="Acc&eacute;der &agrave; la page Github du projet">{{ repo.name }}</a> <span class="subtitle"><span class="hide-on-small"> &mdash; </span>{{ repo.language }}</span>
                 <p>{{ repo.description }}</p>
             </li>
             {% endfor %}
@@ -27,11 +27,11 @@
         <h2>Projets auxquels j'ai contribu&eacute;</h2>
         <ul class="contributed-projects">
             <li>
-                <a href="https://github.com/FriendCode/codebox/" title="Acc&eacute;der &agrave; la page Github du projet">FriendCode/codebox</a> <span class="subtitle"> &mdash; JavaScript</span>
+                <a href="https://github.com/FriendCode/codebox/" title="Acc&eacute;der &agrave; la page Github du projet">FriendCode/codebox</a> <span class="subtitle"><span class="hide-on-small"> &mdash; </span>JavaScript</span>
                 <p>Open source cloud &amp; desktop IDE</p>
             </li>
             <li>
-                <a href="https://code.launchpad.net/~proxiad-openerp/proxiad-openobjects-addons/7.0" title="Acc&eacute;der au launchpad">OpenERP Modules</a> <span class="subtitle"> &mdash; Python</span>
+                <a href="https://code.launchpad.net/~proxiad-openerp/proxiad-openobjects-addons/7.0" title="Acc&eacute;der au launchpad">OpenERP Modules</a> <span class="subtitle"><span class="hide-on-small"> &mdash; </span>Python</span>
                 <p>Development of generic modules for OpenERP</p>
             </li>
         </ul>

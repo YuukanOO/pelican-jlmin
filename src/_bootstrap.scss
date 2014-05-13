@@ -18,6 +18,7 @@
 // Import third party libraries
 @import "vendor/_pygments_tomorrow_night";
 @import "vendor/susy";
+@import "breakpoint";
 
 // Import the whole framework
 @import "framework/all";
@@ -30,3 +31,4 @@
 @import "modules/code";
 @import "modules/media";
 @import "modules/utility";
+@import "modules/responsive";

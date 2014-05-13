@@ -11,3 +11,11 @@ Directory Structure
 - `src/` : SASS source files
 - `static/` : Generated CSS file(s)
 - `templates/` : jinja2 template files
+
+Assets Compilation
+---
+
+Requires [bundler](http://bundler.io/).
+
+- Run `bundle install`
+- Run `bundle exec compass compile`

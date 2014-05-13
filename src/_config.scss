@@ -19,6 +19,8 @@ $baseline: 18px !default;
  */
 
 $container_width: em(650px);
+$when-large: 30em;
+$when-small: 1em $when-large;
 
 /**
  * COLORS

@@ -8,13 +8,13 @@
 */
 
 %right {
-    @include span(6);
     text-align: right;
+    @include span(6);
 }
 
 %left {
-    @include span(6);
     text-align: left;
+    @include span(6);
 }
 
 .list-header {
@@ -22,12 +22,22 @@
     @include container;
 
     h1 {
-        @extend %left;
         margin-top: 0;
+        margin-bottom: 0;
+
+        @include breakpoint($when-large) {
+            text-align: left;
+            @include b_margin($bottom: true);
+            @include span(6);
+        }
     }
 
     .right {
-        @extend %right;
+        @include breakpoint($when-large) {
+            text-align: right;
+            @include span(6);
+        }
+
         @include b_margin(0.5, $top: true);
     }
 
@@ -62,7 +72,12 @@
 .archives-list {
     h2 {
         @extend %body;
-        display: inline;
+        display: block;
+        margin-bottom: 0;
+
+        @include breakpoint($when-large) {
+            display: inline;
+        }
     }
 
     .content,
